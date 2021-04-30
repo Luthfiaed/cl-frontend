@@ -1,13 +1,11 @@
 <template>
-    <section class="container mx-auto pt-8">
-        <div class="flex justify-between items-center">
-          <div class="w-full mr-6">
-            <h2 class="text-4xl text-gray-900 mb-2 font-medium">Vostra Central License</h2>
-          </div>
-          <div class="w-3/4 mr-6">
+    <section class="container mx-auto relative">
+
+        <div class="flex absolute top-4">
+          <div class="w-3/4 mr-2 item-start">
             <h3 class="text-2xl text-gray-900 mb-4">Create New Tenant</h3>
           </div>
-          <div class="w-1/4 text-right">
+          <div class="w-1/4 content-end">
             <button
               @click="save"
               class="button--blue-2 mb-2"
@@ -16,7 +14,8 @@
             </button>
           </div>
         </div>
-        <div class="block mb-2">
+
+        <div class="block mb-2 mt-5">
           <div class="w-full lg:max-w-full lg:flex mb-4">
             <div
               class="w-full border border-gray-400 bg-white rounded pl-8 pr-8 pt-8 pb-4 flex flex-col justify-between leading-normal"
@@ -82,6 +81,8 @@
 
 <script>
 export default {
+    layout: 'minimal',
+
     data() {
         return {
             tenant: {

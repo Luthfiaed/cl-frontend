@@ -16,8 +16,19 @@ export default {
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       { rel: 'stylesheet',
-        href: 'https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap' }
+        href: 'https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap' },
+      { rel: 'stylesheet',
+        href: 'https://fonts.googleapis.com/css?family=Nunito:400,700,800' },
+      { rel: 'stylesheet',
+        href: 'https://use.fontawesome.com/releases/v5.3.1/css/all.css',
+        integrity: 'sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU',
+        crossorigin: 'anonymous' },
+      { rel: 'stylesheet',
+        href: 'https://unpkg.com/tailwindcss/dist/tailwind.min.css' },
+      { rel: 'stylesheet', 
+        href: 'https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.css' }
     ]
+    // script: {src: "https://account.vostra.co.id/auth/js/keycloak.js"}
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
@@ -39,17 +50,15 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
-    // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
-    // https://go.nuxtjs.dev/pwa
-    '@nuxtjs/pwa',
+    '@nuxtjs/pwa'
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
     baseURL: 'http://localhost:8080/api/v1/'
   },
-
+  
   // PWA module configuration: https://go.nuxtjs.dev/pwa
   pwa: {
     manifest: {

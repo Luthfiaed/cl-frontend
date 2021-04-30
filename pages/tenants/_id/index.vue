@@ -1,19 +1,19 @@
 <template>
-      <section class="container mx-auto pt-8">
-        <div class="flex justify-between items-center">
+      <section class="container relative">
+        <div class="flex absolute top-4">
           <div class="text-right">
             <nuxt-link
               :to="{ name: 'tenants-id-update',
                      params: { id: tenant.id }
                      }"
-              class="button--blue-1 mb-6"
+              class="button--blue-2 mb-2"
             >
               Edit
             </nuxt-link>
           </div>
         </div>
         <div class="block mb-2">
-          <div class="w-full lg:max-w-full lg:flex mb-4">
+          <div class="w-full lg:max-w-full lg:flex">
             <div
               class="border border-gray-400 bg-white rounded p-8 flex flex-col justify-between leading-normal"
             >
@@ -48,6 +48,8 @@
 
 <script>
 export default {
+  layout: 'minimal',
+  
   async asyncData({ $axios, params }) {
     const tenant = await $axios.$get('tenants/' + params.id)
 

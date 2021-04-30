@@ -15,7 +15,7 @@ module.exports = {
               20: "20px",
             },
             fontFamily: {
-                sans: ["Poppins", "sans-serif"],
+                sans: ["Poppins", "sans-serif", "Nunito"],
               },
           },
         },

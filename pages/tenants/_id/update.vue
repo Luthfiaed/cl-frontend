@@ -1,19 +1,14 @@
 <template>
-    <section class="container mx-auto pt-8">
-        <div class="flex justify-between items-center ">
-          <div class="w-full mr-6">
-            <h2 class="text-4xl text-gray-900 mb-2 font-medium">Vostra Central License</h2>
+    <section class="container relative">
+        <div class="flex absolute top-4">
+          <div class="w-3/4 mr-2 content-end">
+            <h3 class="text-2xl text-gray-900 mb-4">Edit Tenant</h3>
           </div>
-        </div>
-        <div class="flex justify-between items-center">
-          <div class="w-3/4 mr-6">
-            <h3 class="text-2xl text-gray-900 mb-4">Edit Tenant {{ tenant.tenant_name }}</h3>
-          </div>
-          <div class="w-1/4 text-right">
+          <div class="w-1/4 content-end mb-5">
             <button
               @click="edit"
               class="button--blue-2 px-4 py-1 my-2 rounded inline-flex items-center">
-              Save Edit
+              Save
             </button>
           </div>
         </div>
@@ -82,6 +77,8 @@
 
 <script>
 export default {
+    layout: 'minimal',
+    
     async asyncData({ $axios, params }) {
         const tenant = await $axios.$get('tenants/' + params.id)
         return { tenant }

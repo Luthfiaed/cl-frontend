@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html {{ HTML_ATTRS }}>
+  <head {{ HEAD_ATTRS }}>
+    {{ HEAD }}
+    <script src="https://account.vostra.co.id/auth/js/keycloak.js"></script>
+  </head>
+  <body {{ BODY_ATTRS }}>
+    {{ APP }}
+
+    <script>
+        var keycloakOptions = {
+            url: "https://account.vostra.co.id/auth",
+            realm: "master",
+            clientId: "xyz.vostra.license"
+        };
+        
+        var keycloak = Keycloak(keycloakOptions);
+        
+        keycloak.init({ onLoad: "login-required" });
+    </script>
+  </body>
+</html>
